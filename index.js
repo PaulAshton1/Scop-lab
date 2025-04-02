@@ -24,7 +24,10 @@ const leastFavoriteCustomer = 'Alice';
 
 // Write changeLeastFavoriteCustomer() function
 function changeLeastFavoriteCustomer() {
-  // Attempting to reassign a const will cause an error
-  // Uncomment the following line to see the error in action:
-  // leastFavoriteCustomer = 'Bob'; // TypeError: Assignment to constant variable
+    try {
+      leastFavoriteCustomer = 'Bob'; // Attempting to reassign a const will cause an error
+    } catch (e) {
+      console.log('Error caught: ' + e.message);  // This logs the error message
+    }
+ 
 }
